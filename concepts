@@ -1,0 +1,49 @@
+Abrir o VSCode pelo terminal windowns PowerShell ou pelo VSCode mesmo
+
+Acessar o caminho onde foi criado o ambiente virtual 
+
+Criar um novo arquivo com a extensão .py
+
+Checar se no canto inferior direito, o caminho do interpretador python foi alterado para a nova pasta. Caso tenha ficado na pasta do App default do windows, clique e altere a opção para o caminho do ambiente virtual.
+
+Para rodar as caixas de código, utilize o Run Python File no botão localizado na parte superior esquerda da tela do VSCode.
+
+Importando pandas as pd. O ambiente virtual não tem esta biblioteca disponível. Então a solução é executá-lo diretamente pela pasta virtual. Assim, busque o arquivo python.exe na pasta do ambiente virtual. Ex: C:\Users\Desktop\Python\Exercicios\vscode\material_modulo12\Novo_Ambiente_Virtual\george_amb_virt\Scripts\python.exe
+  Copie este caminho e execute o ctrl + shif + p no vscode para abrir o menu do vscode. Então digite *json para localização a opção Preferencias Abrir Configurações (JSON).
+  O pacote abaixo para rodar o arquivo JSON:
+
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 15,
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.shell.windows": "C:\\Windowns\\System32\\cmd.exe",
+    "files.autoSave": "afterDelay",
+}
+
+Então digite e apague as linguagens que não serão utilizadas  no projeto virtual:
+
+"code-runner.executorMap":
+{
+  "python": "python u",
+}
+
+Apagar o python u e coloque o caminho onde se deseja rodar o ambiente virtual.
+
+C:\Users\goaf\OneDrive - Novozymes A S\Desktop\Python\Exercicios\vscode\material_modulo12\Novo_Ambiente_Virtual\george_amb_virt\Scripts\python.exe
+
+Inclua a contra barra, pois o JSON entende que uma barra invertida somente, é para um escape
+
+{
+  "python": "C:\\Users\\Desktop\\Python\\Exercicios\\vscode\\material_modulo12\\Novo_Ambiente_Virtual\\george_amb_virt\\Scripts\\python.exe",
+}
+
+A seguir rode o código Run Python File
+
+Verifique se o ambiente virtual foi redirecionado para pasta do projeto então rode a instalação do pandas
+
+Digite o comando: pip install pandas e aguarde a instalação ser concluída.
+
+
+
+  
